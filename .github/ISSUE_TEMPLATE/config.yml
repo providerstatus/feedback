@@ -1,0 +1,14 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Report a security vulnerability
+    url: https://github.com/providerstatus/feedback/security/advisories/new
+    about: Private and visible only to us. Never open a public issue for a vulnerability.
+  - name: An outage at a monitored provider
+    url: https://providerstatus.dev/providers
+    about: We measure these services, we do not run them. Their own support is the right address — unless our page disagrees with theirs, which we do want to hear.
+  - name: HostAtlas product support
+    url: https://hostatlas.app
+    about: For your own fleet, monitors or billing. ProviderStatus is the free public sibling.
+  - name: How we test
+    url: https://providerstatus.dev/about
+    about: Thresholds, retention and the limits of the measurement — worth a look before reporting a wrong status.

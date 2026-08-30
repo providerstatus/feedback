@@ -1,0 +1,36 @@
+name: API, docs or site problem
+description: Something on providerstatus.sh or providerstatus.dev is broken, wrong or surprising.
+title: "[bug] "
+labels: ["bug", "needs-triage"]
+body:
+  - type: dropdown
+    id: surface
+    attributes:
+      label: Where
+      options:
+        - providerstatus.sh — the text/JSON/Prometheus API
+        - providerstatus.dev — the web pages
+        - The documentation
+    validations:
+      required: true
+  - type: input
+    id: url
+    attributes:
+      label: URL or command
+      placeholder: "curl -H 'Accept: application/json' providerstatus.sh/stripe/history?w=7d"
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: What you expected
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened
+      description: Paste the response or describe what you saw. For the pages, your browser and OS help.
+      render: shell
+    validations:
+      required: true

@@ -1,0 +1,63 @@
+name: Add a provider
+description: Suggest a third-party provider we should monitor.
+title: "[provider] "
+labels: ["new-provider", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        We monitor what we depend on ourselves, plus what people ask for.
+        The bar is simple: the endpoint must be **public and
+        unauthenticated**, and it must not mind one request every 30
+        seconds from ten locations.
+  - type: input
+    id: provider
+    attributes:
+      label: Provider name
+      placeholder: Backblaze B2
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Category
+      options:
+        - Hosting & Cloud
+        - Payments
+        - CDN & DNS
+        - Email & Comms
+        - Dev & CI
+        - AI & APIs
+        - Something else
+    validations:
+      required: true
+  - type: textarea
+    id: endpoints
+    attributes:
+      label: Endpoints to probe
+      description: One per line. The API root or a documented health path is usually right. Say which one is the flagship.
+      placeholder: |
+        https://api.backblazeb2.com/b2api/v3  (primary)
+        https://www.backblaze.com/status
+    validations:
+      required: true
+  - type: input
+    id: statuspage
+    attributes:
+      label: Their own status page
+      description: Optional — we link to it so people can compare our measurement with theirs.
+      placeholder: https://status.backblaze.com
+  - type: textarea
+    id: why
+    attributes:
+      label: Why it matters
+      description: Who breaks when this provider breaks?
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: The endpoint is public and needs no API key, token or login.
+          required: true
+        - label: A plain GET to it has no side effects — no charge, no email, no resource created.
+          required: true

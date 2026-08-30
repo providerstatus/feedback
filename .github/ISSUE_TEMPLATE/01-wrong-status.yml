@@ -1,0 +1,62 @@
+name: A status looks wrong
+description: A provider is shown as down, degraded or up, and that does not match reality.
+title: "[status] "
+labels: ["status-report", "needs-triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        The site currently shows **mock data** while the probe pipeline is
+        being built. If you are reporting that today's numbers are made up:
+        we know, and they are. Everything else, please do tell us.
+  - type: input
+    id: provider
+    attributes:
+      label: Provider
+      description: The API name from the provider index, e.g. `stripe`, `hetzner`, `cloudflare`.
+      placeholder: stripe
+    validations:
+      required: true
+  - type: input
+    id: when
+    attributes:
+      label: When you saw it (UTC)
+      description: Our probe cycle is 30 seconds, so a rough timestamp is enough to find it in the raw data.
+      placeholder: 2026-08-30 14:20 UTC
+    validations:
+      required: true
+  - type: dropdown
+    id: shown
+    attributes:
+      label: What the page showed
+      options:
+        - Operational
+        - Degraded
+        - Partial outage
+        - Full outage
+        - Maintenance
+    validations:
+      required: true
+  - type: textarea
+    id: actual
+    attributes:
+      label: What you observed instead
+      description: What were you seeing from your own side, and how did you check?
+      placeholder: |
+        api.stripe.com answered normally from our EU servers the whole time,
+        median around 180 ms. Their own status page showed no incident either.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Anything to back it up
+      description: Optional — curl output, a screenshot, a link to the provider's own incident.
+      render: shell
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: This is about our measurement, not about an outage at the provider itself.
+          required: true
