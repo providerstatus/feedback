@@ -9,7 +9,7 @@ body:
         We monitor what we depend on ourselves, plus what people ask for.
         The bar is simple: the endpoint must be **public and
         unauthenticated**, and it must not mind one request every 30
-        seconds from ten locations.
+        seconds from eight locations.
   - type: input
     id: provider
     attributes:

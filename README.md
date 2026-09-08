@@ -26,7 +26,7 @@ between "we can look it up" and "we cannot".
 
 **A provider is missing.** We monitor what we depend on ourselves plus
 what people ask for. Bring the public endpoint you want probed. If it is
-unauthenticated and does not mind a request every 30 seconds from ten
+unauthenticated and does not mind a request every 30 seconds from eight
 locations, it usually lands quickly.
 
 **The API or the docs are wrong.** A response shape that changed without
