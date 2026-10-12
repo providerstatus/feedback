@@ -9,10 +9,16 @@ us a number is wrong, ask for a provider to be added, or report a
 problem with the text API — without needing an account anywhere but
 GitHub.
 
-> **Pre-launch.** The site currently renders mock data while the probe
-> pipeline is being built, so please do not report the current numbers
-> as inaccurate — they are placeholders and we know. Everything else is
-> fair game.
+> **Pre-launch — the pages are not up yet, but the measurement is real.**
+> `providerstatus.dev` has no site behind it at the moment; the HTML is
+> written and unpublished. What does run is the measurement: eight probe
+> locations have been checking 113 endpoints since 31 August 2026, and
+> `providerstatus.sh` serves those numbers as plain text today —
+> `curl providerstatus.sh/stripe`. Every figure there is our own
+> observation, so **if one looks wrong to you, that is exactly the report
+> we want.** This notice used to say the numbers were placeholders. They
+> stopped being placeholders when the probes started, and this sentence
+> took six weeks to catch up.
 
 ---
 
