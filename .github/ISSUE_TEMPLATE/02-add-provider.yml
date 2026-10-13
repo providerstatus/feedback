@@ -8,8 +8,9 @@ body:
       value: |
         We monitor what we depend on ourselves, plus what people ask for.
         The bar is simple: the endpoint must be **public and
-        unauthenticated**, and it must not mind one request every 30
-        seconds from eight locations.
+        unauthenticated**, and it must not mind **one request a minute
+        from each of eight locations**. A slower cadence is available
+        where a provider prefers one.
   - type: input
     id: provider
     attributes:
@@ -21,6 +22,7 @@ body:
     id: category
     attributes:
       label: Category
+      description: The live list is the one on the provider index; if an option here is missing from it, the option is the stale one.
       options:
         - Hosting & Cloud
         - Payments

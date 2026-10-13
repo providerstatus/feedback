@@ -27,13 +27,16 @@ GitHub.
 **A status looks wrong.** A provider marked down that is plainly fine, a
 provider that is clearly broken and still shows green, an availability
 figure that cannot be right. Tell us what you saw and roughly when, in
-UTC — our probe cycle is 30 seconds, so a timestamp makes the difference
-between "we can look it up" and "we cannot".
+UTC — a rough timestamp makes the difference between "we can look it up"
+and "we cannot". Raw per-location measurements are queryable for about
+three months, so an old report is still checkable.
 
 **A provider is missing.** We monitor what we depend on ourselves plus
 what people ask for. Bring the public endpoint you want probed. If it is
-unauthenticated and does not mind a request every 30 seconds from eight
-locations, it usually lands quickly.
+unauthenticated and does not mind **one request a minute from each of
+eight locations**, it usually lands quickly. A slower cadence is
+available where a provider prefers one — three endpoints are on five
+minutes today and one is on ten.
 
 **The API or the docs are wrong.** A response shape that changed without
 warning, a documented endpoint that behaves differently, an example that
@@ -75,11 +78,14 @@ product.
 
 ## Related
 
+Two of these are not published yet, and are marked so rather than left
+to fail in your browser — see the notice at the top.
+
 | | |
 |---|---|
-| Live status | [providerstatus.dev](https://providerstatus.dev) |
-| Text / JSON API | [providerstatus.sh](https://providerstatus.sh) |
-| Method in full | [providerstatus.dev/about](https://providerstatus.dev/about) |
+| Live status | [providerstatus.dev](https://providerstatus.dev) — *not published yet* |
+| Text / JSON API | [providerstatus.sh](https://providerstatus.sh) — **live today** |
+| Method in full | [providerstatus.dev/about](https://providerstatus.dev/about) — *not published yet* |
 | The product | [hostatlas.app](https://hostatlas.app) · [github.com/hostatlas-app](https://github.com/hostatlas-app) |
 | Open-source tools | [labs.hostatlas.app](https://labs.hostatlas.app) · [github.com/hostatlas-labs](https://github.com/hostatlas-labs) |
 

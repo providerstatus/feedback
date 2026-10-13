@@ -6,9 +6,17 @@ body:
   - type: markdown
     attributes:
       value: |
-        The site currently shows **mock data** while the probe pipeline is
-        being built. If you are reporting that today's numbers are made up:
-        we know, and they are. Everything else, please do tell us.
+        Every figure is our own measurement: eight probe locations have
+        been checking 113 endpoints since 31 August 2026. **If a number
+        looks wrong to you, that is exactly the report we want** — it is
+        the most valuable thing anyone can send us.
+
+        The HTML pages are not published yet, so the numbers you can see
+        today are on the text API: `curl providerstatus.sh/stripe`.
+
+        (Until 13 October 2026 this form said the site showed mock data
+        and asked you not to report it. That stopped being true on
+        31 August and the sentence did not.)
   - type: input
     id: provider
     attributes:
@@ -21,8 +29,8 @@ body:
     id: when
     attributes:
       label: When you saw it (UTC)
-      description: Our probe cycle is 30 seconds, so a rough timestamp is enough to find it in the raw data.
-      placeholder: 2026-08-30 14:20 UTC
+      description: A rough timestamp is enough — raw per-location measurements stay queryable for about three months. Each endpoint is measured about once a minute.
+      placeholder: 2026-10-12 14:20 UTC
     validations:
       required: true
   - type: dropdown

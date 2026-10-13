@@ -4,11 +4,11 @@ contact_links:
     url: https://github.com/providerstatus/feedback/security/advisories/new
     about: Private and visible only to us. Never open a public issue for a vulnerability.
   - name: An outage at a monitored provider
-    url: https://providerstatus.dev/providers
-    about: We measure these services, we do not run them. Their own support is the right address — unless our page disagrees with theirs, which we do want to hear.
+    url: https://providerstatus.sh/
+    about: The live list, as plain text. We measure these services, we do not run them — their own support is the right address, unless our measurement disagrees with theirs, which we do want to hear.
   - name: HostAtlas product support
     url: https://hostatlas.app
     about: For your own fleet, monitors or billing. ProviderStatus is the free public sibling.
-  - name: How we test
-    url: https://providerstatus.dev/about
-    about: Thresholds, retention and the limits of the measurement — worth a look before reporting a wrong status.
+  - name: What we measure, and what we do not
+    url: https://github.com/providerstatus/feedback#readme
+    about: What a status here does and does not claim, and how a report is handled. The method in full — thresholds, retention, the limits — is at providerstatus.dev/about, which is not published yet, so this README is the address until it is.
