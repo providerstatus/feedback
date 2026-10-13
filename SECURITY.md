@@ -22,7 +22,7 @@ one.
 
 | Surface | What runs there |
 |---|---|
-| `providerstatus.dev` | Static pages (Cloudflare Pages) **and** a Worker on six routes: `/api/v1/*` (public JSON), `/probe-sites`, `/probe-config` and `/sitemap-providers.xml` (public reads), `/ingest*` (shared-secret, probe hosts only) and `/admin/*` (bearer token) |
+| `providerstatus.dev` | Static pages (Cloudflare Pages) **and** a Worker. Its routes, listed rather than counted: `GET /api/v1/providers`, `GET /api/v1/provider/<slug>[/history]`, `GET /probe-sites`, `GET /probe-config`, `GET /sitemap-providers.xml` (public reads) · **`POST /api/v1/event`** — an unauthenticated write: it appends one row to a usage Analytics Engine dataset kept separate from the measurements, with the body capped, no identifier, no IP and no cookie, and always answers `204` · `POST /ingest` (shared secret, probe hosts only) · `GET`/`POST /admin/*` (bearer token) |
 | `providerstatus.sh` | One Worker, read-only: the same data as plain text, JSON or Prometheus metrics |
 
 Both are Cloudflare Workers over Cloudflare D1 and Analytics Engine. There is
@@ -50,11 +50,14 @@ what you suspect and we will reproduce it ourselves.
 ## What we publish afterwards
 
 Corrections and incidents that affected published figures go into the public
-changelog at <https://providerstatus.dev/changes>, including the ones that
+changelog at <https://providerstatus.dev/changes> (not published yet —
+until it is, this repository is the record), including the ones that
 make us look bad. If a vulnerability caused a wrong figure about a provider,
 that provider is told directly as well.
 
 ---
 
 Machine-readable version, kept in step with this file:
-<https://providerstatus.dev/.well-known/security.txt>
+<https://providerstatus.dev/.well-known/security.txt> — written and, like
+every page on that host, not yet served. This file is the published copy
+until the site is up.

@@ -52,7 +52,9 @@ a page that fails on your browser or screen reader.
 discloses the problem to everyone before it is fixed. Use
 [private vulnerability reporting](https://github.com/providerstatus/feedback/security/advisories/new),
 which is enabled on this repository and visible only to us. Details in
-our [security.txt](https://providerstatus.dev/.well-known/security.txt).
+our [SECURITY.md](SECURITY.md) in this repository. (The
+`security.txt` on `providerstatus.dev` is the same policy, and that host
+serves nothing yet.)
 
 **Outages at the providers themselves.** We measure Stripe, Hetzner,
 Cloudflare and the rest from the outside; we do not operate them and

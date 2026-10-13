@@ -9,7 +9,7 @@ body:
       label: Where
       options:
         - providerstatus.sh — the text/JSON/Prometheus API
-        - providerstatus.dev — the web pages
+        - providerstatus.dev — the web pages (not published yet; the host answers an error today)
         - The documentation
     validations:
       required: true
